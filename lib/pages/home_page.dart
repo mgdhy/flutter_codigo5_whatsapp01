@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_whatsapp/pages/call_page.dart';
 import 'package:flutter_codigo5_whatsapp/pages/chat_page.dart';
+import 'package:flutter_codigo5_whatsapp/pages/status_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,13 +15,11 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    print("INIT STATE");
     _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
-    print("BUILD!");
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.message),
@@ -82,7 +81,7 @@ class _HomePageState extends State<HomePage>
         children: [
           Center(child: Text("Cámara")),
           ChatPage(),
-          Center(child: Text("Status")),
+          StatusPage(),
           CallPage(),
         ],
       ),

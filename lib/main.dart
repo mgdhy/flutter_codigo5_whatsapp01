@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_whatsapp/pages/home_page.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 

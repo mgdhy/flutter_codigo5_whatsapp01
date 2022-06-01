@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_whatsapp/data/data_dummy.dart';
 import 'package:flutter_codigo5_whatsapp/models/chat_message.dart';
@@ -11,7 +10,6 @@ class ChatDetailPage extends StatefulWidget {
 }
 
 class _ChatDetailPageState extends State<ChatDetailPage> {
-
   final TextEditingController _messageController = TextEditingController();
 
   @override
@@ -21,7 +19,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         leadingWidth: 20,
         title: Row(
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               backgroundColor: Colors.black12,
               backgroundImage: NetworkImage(
                   "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
@@ -32,7 +30,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     "Ximena Lopez",
                     style: TextStyle(fontSize: 18.0),
@@ -55,15 +53,15 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.videocam_rounded),
+            icon: const Icon(Icons.videocam_rounded),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.call),
+            icon: const Icon(Icons.call),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.more_vert),
+            icon: const Icon(Icons.more_vert),
           ),
         ],
       ),
@@ -86,17 +84,17 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 6.0),
                   decoration: BoxDecoration(
                       color: chatMessageList[index].messageType == "me"
-                          ? Color(0xffE3FFC4)
+                          ? const Color(0xffE3FFC4)
                           : Colors.white,
                       borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(14.0),
-                        bottomRight: Radius.circular(14.0),
+                        bottomLeft: const Radius.circular(14.0),
+                        bottomRight: const Radius.circular(14.0),
                         topRight: chatMessageList[index].messageType == "me"
-                            ? Radius.circular(0.0)
-                            : Radius.circular(14.0),
+                            ? const Radius.circular(0.0)
+                            : const Radius.circular(14.0),
                         topLeft: chatMessageList[index].messageType == "me"
-                            ? Radius.circular(14.0)
-                            : Radius.circular(0.0),
+                            ? const Radius.circular(14.0)
+                            : const Radius.circular(0.0),
                       ),
                       boxShadow: [
                         BoxShadow(
@@ -120,16 +118,16 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                   Expanded(
                     child: TextField(
                       controller: _messageController,
-                      style: TextStyle(fontSize: 17.0),
-                      cursorColor: Color(0xff065D54),
+                      style: const TextStyle(fontSize: 17.0),
+                      cursorColor: const Color(0xff065D54),
                       decoration: InputDecoration(
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.sentiment_satisfied_alt_rounded,
                           size: 30.0,
                           color: Color(0xff787A79),
                         ),
                         hintText: "Type message",
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           fontSize: 17.0,
                           color: Colors.black38,
                         ),
@@ -146,7 +144,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                           children: [
                             IconButton(
                               onPressed: () {},
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.attach_file_rounded,
                                 size: 30,
                                 color: Color(0xff787A79),
@@ -154,7 +152,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                             ),
                             IconButton(
                               onPressed: () {},
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.camera_alt_rounded,
                                 color: Color(0xff787A79),
                                 size: 30,
@@ -180,17 +178,15 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                         ),
                       );
                       _messageController.clear();
-                      setState(() {
-
-                      });
+                      setState(() {});
                     },
                     child: Container(
                       padding: const EdgeInsets.all(14.0),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xff00887B),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.send,
                         color: Colors.white,
                         size: 30.0,
